@@ -1,0 +1,174 @@
+{
+  "type": "modal",
+  "callback_id": "vacation-request-modal",
+  "title": {
+    "type": "plain_text",
+    "text": "휴가 신청서"
+  },
+  "blocks": [
+    {
+      "type": "header",
+      "block_id": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "휴가 신청서",
+        "emoji": true
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "input",
+      "block_id": "vacationType",
+      "element": {
+        "type": "static_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "휴가 종류 선택",
+          "emoji": true
+        },
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "연차",
+              "emoji": true
+            },
+            "value": "full-day"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "오전 반차",
+              "emoji": true
+            },
+            "value": "morning-half-day"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "오후 반차",
+              "emoji": true
+            },
+            "value": "afternoon-half-day"
+          }
+        ],
+        "action_id": "vacationType"
+      },
+      "label": {
+        "type": "plain_text",
+        "text": "휴가 종류 선택",
+        "emoji": true
+      }
+    },
+    {
+      "type": "input",
+      "block_id": "vacationStart",
+      "element": {
+        "type": "datepicker",
+        "initial_date": "1990-04-28",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "날짜를 선택해주세요",
+          "emoji": true
+        },
+        "action_id": "vacationStart"
+      },
+      "label": {
+        "type": "plain_text",
+        "text": "휴가 시작일 선택",
+        "emoji": true
+      }
+    },
+    {
+      "type": "input",
+      "block_id": "vacationEnd",
+      "element": {
+        "type": "datepicker",
+        "initial_date": "1990-04-28",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "날짜를 선택해주세요",
+          "emoji": true
+        },
+        "action_id": "vacationEnd"
+      },
+      "label": {
+        "type": "plain_text",
+        "text": "휴가 종료일 선택",
+        "emoji": true
+      }
+    },
+    {
+      "type": "input",
+      "block_id": "vacationReason",
+      "element": {
+        "type": "static_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "휴가 사유 선택",
+          "emoji": true
+        },
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "병가",
+              "emoji": true
+            },
+            "value": "sick"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "경조사",
+              "emoji": true
+            },
+            "value": "congrats-and-condolences"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "기타",
+              "emoji": true
+            },
+            "value": "other"
+          }
+        ],
+        "action_id": "vacationReason"
+      },
+      "label": {
+        "type": "plain_text",
+        "text": "휴가 사유를 선택해주세요",
+        "emoji": true
+      }
+    },
+    {
+      "type": "input",
+      "block_id": "otherVacationReason",
+      "optional": true,
+      "element": {
+        "type": "plain_text_input",
+        "action_id": "otherVacationReason",
+        "max_length": 100,
+        "placeholder": {
+          "type": "plain_text",
+          "text": "기타 사유를 작성해주세요"
+        }
+      },
+      "label": {
+        "type": "plain_text",
+        "text": "기타 사유를 선택시 사유를 작성해주세요",
+        "emoji": true
+      }
+    },
+    {
+      "type": "divider"
+    }
+  ],
+  "submit": {
+    "type": "plain_text",
+    "text": "제출하기"
+  }
+}

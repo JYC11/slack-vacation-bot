@@ -1,0 +1,99 @@
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "휴가 신청 내용:"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "block_id": "requester",
+      "text": {
+        "type": "plain_text",
+        "text": "신청자:  ",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "block_id": "vacationType",
+      "text": {
+        "type": "plain_text",
+        "text": "휴가 종류:  ",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "block_id": "vacationStart",
+      "text": {
+        "type": "plain_text",
+        "text": "시작일:  ",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "block_id": "vacationEnd",
+      "text": {
+        "type": "plain_text",
+        "text": "종료일:  ",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "block_id": "vacationReason",
+      "text": {
+        "type": "plain_text",
+        "text": "휴가 사유:  ",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "block_id": "otherVacationReason",
+      "text": {
+        "type": "plain_text",
+        "text": "기타 사유:  ",
+        "emoji": true
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "block_id": "allow-deny",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "승인",
+            "emoji": true
+          },
+          "action_id": "allow-vacation-button",
+          "value": "allow-vacation",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "미승인",
+            "emoji": true
+          },
+          "action_id": "deny-vacation-button",
+          "value": "deny-vacation",
+          "style": "danger"
+        }
+      ]
+    }
+  ]
+}
