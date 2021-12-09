@@ -8,6 +8,8 @@ const {
   buildSubmissionData,
   findTarget,
   buildGoogleCalendarEvent,
+  generateVacationRequestModal,
+  generateAllowDenyModal
 } = require("./utils/dataProcessingFunctions");
 require("dotenv").config();
 
@@ -20,7 +22,7 @@ const app = new App({
 });
 
 let mg = new modalGenerator();
-let vacationRequestModal = mg.generateVacationRequestModal();
+let vacationRequestModal = generateVacationRequestModal();
 
 const vacationSpreadsheetId = process.env.VACATION_SPREADSHEET;
 const vacationSheet = process.env.VACATION_SHEET;
@@ -82,7 +84,7 @@ app.view("vacation-request-modal", async ({ ack, body, view, client }) => {
     });
   } else {
     await ack();
-    let allowDenyModal = mg.generateAllowDenyModal(submissions, body["user"]);
+    let allowDenyModal = generateAllowDenyModal(submissions, body["user"]);
 
     try {
       await client.chat.postMessage({
